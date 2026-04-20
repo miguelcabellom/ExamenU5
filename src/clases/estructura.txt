@@ -1,0 +1,76 @@
+-------------------------
+MandoDistancia
+-------------------------
+# modelo		: String
+# precio		: double
+# encendido		: boolean = false
++ encender(), apagar()
++ equals() modelo
++ compareTo() modelo
++ toString()
+
+
+-------------------------
+interface controlVolumen
+-------------------------
++ subirVolumen(), bajarVolumen()
+
+
+-------------------------
+interface controlVelocidad
+-------------------------
+- CAMBIO_VELOCIDAD		: int = 10
++ subirVelocidad(), bajarVelocidad()
+
+
+-------------------------
+Exception MandoApagadoException
+-------------------------
+Mensaje: Error: el mando esta apagado
+
+
+-------------------------
+MandoTV extends MandoDistancia implements controlVolumen
+-------------------------
+- CAMBIO_VOLUMEN		: int = 5
+- volumen, canal		: int
++ cambiarCanal()
++ subirVolumen(), bajarVolumen()
++ toString()
+
+
+-------------------------
+MandoMinicadena extends MandoDistancia implements controlVolumen
+-------------------------
+- CAMBIO_VOLUMEN		: int = 10
+- volumen		: int
++ subirVolumen(), bajarVolumen()
++ toString()
+
+
+-------------------------
+MandoAspiradora
+-------------------------
+- velocidad		: int = 0
++ subirVelocidad(), bajarVelocidad()
++ toString()
+-------------------------
+Maximo de velocidad 3
+-------------------------
+
+
+-------------------------
+MandoAireAcondicionado
+-------------------------
+- enum modos {FRIO, CALOR} = FRIO
+- temperatura	: double
+- velocidad		: int = 0
++ cambiarModo()
++ cambiarTemperatura()
++ subirVelocidad(), bajarVelocidad()
++ toString()
+-------------------------
+Maximo de velocidad 5
+-------------------------
+
+
